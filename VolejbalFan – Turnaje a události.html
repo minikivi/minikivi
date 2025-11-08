@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html -->
+<html lang="cs"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VolejbalFan – Turnaje a události</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #121212;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1f1f1f;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    header h1 {
+      color: #ffa726;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.6rem;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffa726;
+    }
+
+    nav a.active::after,
+    nav a:hover::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #ffa726;
+      border-radius: 2px;
+    }
+
+    .hero {
+      background: url('https://cdn.pixabay.com/photo/2016/11/21/12/59/beach-volleyball-1845943_1280.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      color: #ffa726;
+      max-width: 700px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-content p {
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 1100px;
+      margin: 3rem auto 5rem;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.4rem;
+    }
+
+    article.card {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(255, 167, 38, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    article.card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(255, 167, 38, 0.6);
+    }
+
+    article.card h3 {
+      color: #ffb74d;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    article.card p, article.card ul {
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    article.card ul {
+      padding-left: 1.3rem;
+    }
+
+    article.card li {
+      margin-bottom: 0.6rem;
+    }
+
+    article.card a {
+      color: #ffa726;
+      font-weight: 600;
+      margin-top: 1.2rem;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.3s ease;
+      align-self: flex-start;
+    }
+
+    article.card a:hover {
+      border-color: #ffa726;
+    }
+
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 1.2rem;
+      color: #777;
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h2 { font-size: 2.2rem; }
+      main { grid-template-columns: 1fr; margin: 2rem 1rem 4rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🏐 VolejbalFan</h1>
+    <nav>
+      <ul>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#world" class="active">Mezinárodní</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#cz">České ligy</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#calendar">Kalendář</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#beach">Plážový</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#youth">Mládež</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#legends">Legendární</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#fans">Fan zóna</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#facts">Zajímavosti</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#gallery">Galerie</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#videos">Videa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Turnaje a události ve světě volejbalu</h2>
+      <p>Objev největší akce, legendární zápasy i energii fanoušků z celého světa.</p>
+    </div>
+  </section>
+
+  <main>
+    <article class="card" id="world">
+      <h3>🏆 Mezinárodní turnaje</h3>
+      <p>Od mistrovství světa FIVB po olympijské hry – mezinárodní scéna nabízí špičkové výkony a napětí do posledního míče.</p>
+      <ul>
+        <li>FIVB World Championship</li>
+        <li>Olympijské hry</li>
+        <li>Volleyball Nations League (VNL)</li>
+        <li>World Beach Pro Tour</li>
+      </ul>
+    </article>
+
+    <article class="card" id="cz">
+      <h3>🇨🇿 České ligy a poháry</h3>
+      <p>Česká extraliga patří mezi nejstarší v Evropě. Každý rok přináší vyrovnané souboje i nadějné talenty.</p>
+      <ul>
+        <li>Extraliga mužů a žen</li>
+        <li>Český pohár</li>
+        <li>Krajské a okresní přebory</li>
+      </ul>
+    </article>
+
+    <article class="card" id="calendar">
+      <h3>📅 Kalendář sezóny</h3>
+      <p>Sezóna volejbalu je nabitá – od jarních přípravných kempů až po zimní finále. Sleduj důležité termíny a nenech si ujít žádný zápas.</p>
+      <a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#">Zobrazit kompletní kalendář →</a>
+    </article>
+
+    <article class="card" id="beach">
+      <h3>🏖️ Plážový volejbal</h3>
+      <p>Slunce, písek a napětí – plážový volejbal přináší energii i show. Mezi největší hvězdy patří Anders Mol a Eduard Šmídl.</p>
+      <ul>
+        <li>Beach Pro Tour</li>
+        <li>Mistrovství Evropy v beach volejbalu</li>
+        <li>České poháry v beachi</li>
+      </ul>
+    </article>
+
+    <article class="card" id="youth">
+      <h3>👶 Turnaje mládeže</h3>
+      <p>Budoucí hvězdy volejbalu rostou právě tady. Turnaje mládeže podporují techniku, spolupráci i přátelství.</p>
+      <ul>
+        <li>Mládežnické mistrovství republiky</li>
+        <li>Letní tábory a kempy</li>
+        <li>Školní volejbalové ligy</li>
+      </ul>
+    </article>
+
+    <article class="card" id="legends">
+      <h3>⚔️ Legendární zápasy</h3>
+      <p>Některé zápasy se navždy zapsaly do historie. Připomeň si okamžiky, kdy volejbal psal své největší příběhy.</p>
+      <ul>
+        <li>Finále OH 2012 – Rusko vs. Brazílie</li>
+        <li>MS 2018 – Polsko obhajuje titul</li>
+        <li>Historický zápas Česko–Itálie 2001</li>
+      </ul>
+    </article>
+
+    <article class="card" id="fans">
+      <h3>🎟️ Fanouškovská zóna a vstupenky</h3>
+      <p>Podpoř svůj tým! Zde najdeš odkazy na vstupenky, oficiální merchandising a speciální fan akce během turnajů.</p>
+      <a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#">Koupit vstupenky →</a>
+    </article>
+
+    <article class="card" id="facts">
+      <h3>🧠 Zajímavosti a rekordy</h3>
+      <ul>
+        <li>Nejrychlejší smeč: 132 km/h.</li>
+        <li>Nejvíce titulů MS: Brazílie (6x).</li>
+        <li>Volejbal se původně jmenoval “mintonette”.</li>
+      </ul>
+      <a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#">Zjistit další rekordy →</a>
+    </article>
+
+    <article class="card" id="gallery">
+      <h3>📸 Galerie momentů</h3>
+      <p>Podívej se na nejkrásnější momenty z turnajů – vítězství, emoce i okamžiky fair play.</p>
+      <a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#">Otevřít galerii →</a>
+    </article>
+
+    <article class="card" id="videos">
+      <h3>🎥 Video přenosy a highlights</h3>
+      <p>Sleduj volejbal živě nebo si pusť nejlepší okamžiky ze světových šampionátů a extraligy.</p>
+      <a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/kalendar/index.html#">Přehled videí →</a>
+    </article>
+  </main>
+  
+      <input type="submit" value="Odeslat">
+    
+
+    <!-- Animace duchů a dýní -->
+    <div class="ghost" style="top:20%; left:10%;">👻</div>
+    <div class="ghost" style="top:60%; left:80%;">👻</div>
+    <div class="pumpkin" style="top:30%; left:50%;">🎃</div>
+    <div class="pumpkin" style="top:70%; left:20%;">🎃</div>
+
+  <footer>
+    © 2025 VolejbalFan – Turnaje a události | Všechna práva vyhrazena
+  </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+
+</body></html>

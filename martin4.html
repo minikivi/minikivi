@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VolejbalFan – Zajímavosti o volejbalu</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Montserrat', sans-serif; background: #121212; color: #eee; min-height: 100vh; display: flex; flex-direction: column; }
+
+  header { background: #1f1f1f; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+  header h1 { font-weight: 600; font-size: 1.8rem; letter-spacing: 3px; color: #ffa726; }
+  nav ul { list-style: none; display: flex; gap: 1.8rem; }
+  nav a { color: #eee; font-weight: 500; text-decoration: none; font-size: 1rem; padding: 0.25rem 0; position: relative; }
+  nav a:hover, nav a.active { color: #ffa726; }
+  nav a.active::after, nav a:hover::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 100%; height: 3px; background: #ffa726; border-radius: 2px; }
+
+  .hero { background: url('https://cdn.pixabay.com/photo/2017/08/02/01/08/volleyball-2563731_1280.jpg') no-repeat center center/cover; height: 60vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 0 2rem; position: relative; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.7); z-index: 0; }
+  .hero-content { position: relative; color: #ffa726; max-width: 700px; font-weight: 600; text-shadow: 2px 2px 8px rgba(0,0,0,0.9); }
+  .hero-content h2 { font-size: 3rem; margin-bottom: 0.4rem; }
+  .hero-content p { font-weight: 300; font-size: 1.3rem; }
+
+  main { flex-grow: 1; max-width: 1200px; margin: 3rem auto 5rem; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.4rem; }
+
+  article.card { background: #1e1e1e; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(255,167,38,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
+  article.card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(255,167,38,0.6); }
+
+  article.card h3 { color: #ffb74d; font-weight: 700; font-size: 1.6rem; margin-bottom: 1rem; letter-spacing: 1.2px; }
+  article.card p, article.card ul { font-weight: 300; font-size: 1.1rem; line-height: 1.5; color: #ccc; }
+  article.card ul { padding-left: 1.3rem; }
+  article.card ul li { margin-bottom: 0.8rem; }
+  article.card a { color: #ffa726; font-weight: 600; margin-top: 1.5rem; align-self: flex-start; text-decoration: none; border-bottom: 1.5px solid transparent; transition: border-color 0.3s ease; }
+  article.card a:hover { border-color: #ffa726; }
+  article.card img { width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+
+  footer { background: #1f1f1f; text-align: center; padding: 1.2rem; color: #777; font-weight: 300; font-size: 0.9rem; user-select: none; }
+
+  @media (max-width: 480px) {
+    .hero-content h2 { font-size: 2.1rem; }
+    main { grid-template-columns: 1fr; margin: 2rem 1rem 4rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>🏐 Volejbal</h1>
+  <nav>
+    <ul>
+      <li><a href="#facts" class="active">Zajímavosti</a></li>
+      <li><a href="#history">Historie</a></li>
+      <li><a href="#records">Rekordy</a></li>
+      <li><a href="#players">Známí hráči</a></li>
+      <li><a href="#fun">Kuriozity</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" aria-label="Obrázek volejbalového zápasu">
+  <div class="hero-content">
+    <h2>Zajímavosti o volejbalu</h2>
+    <p>Objevte fascinující fakta, rekordy a příběhy ze světa volejbalu.</p>
+  </div>
+</section>
+
+<main>
+  <article class="card" id="facts">
+    <h3>🎓 Základní fakta</h3>
+    <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/volleyball-1991854_1280.jpg" alt="Volejbalový míč">
+    <ul>
+      <li>Volejbal byl vynalezen v roce 1895 Williamem G. Morganem v USA.</li>
+      <li>Původně se hra jmenovala „mintonette“.</li>
+      <li>Hřiště má rozměry 18 × 9 metrů, výška sítě: 2,43 m pro muže, 2,24 m pro ženy.</li>
+      <li>Kolektivní sport, dvě družstva po šesti hráčích.</li>
+      <li>Plážový volejbal je odnož klasického volejbalu s týmy po dvou.</li>
+      <li>Standardní zápas se hraje na tři vítězné sety, každý set do 25 bodů (finální do 15).</li>
+    </ul>
+  </article>
+
+  <article class="card" id="history">
+    <h3>📜 Historie volejbalu</h3>
+    <img src="https://cdn.pixabay.com/photo/2016/10/06/18/30/volleyball-1719580_1280.jpg" alt="Historický volejbal">
+    <p>Volejbal se rychle rozšířil po celém světě. Do Evropy dorazil kolem roku 1910 a dnes je populární v Americe, Evropě, Asii i Africe. Plážový volejbal se stal olympijskou disciplínou v roce 1996. Hra postupně získala oficiální pravidla, mezinárodní soutěže a profesionální ligy.</p>
+    <p>Mezinárodní volejbalová federace FIVB byla založena v roce 1947 a dnes řídí všechny významné soutěže.</p>
+  </article>
+
+  <article class="card" id="records">
+    <h3>🏆 Rekordy</h3>
+    <img src="https://cdn.pixabay.com/photo/2017/08/02/01/08/volleyball-2563732_1280.jpg" alt="Smeč ve volejbalu">
+    <ul>
+      <li>Nejrychlejší smeč: přes 130 km/h.</li>
+      <li>Nejdelší volejbalový zápas: 75 hodin (rekord Guinness).</li>
+      <li>Nejvíce bodů v jednom setu: 45 bodů.</li>
+      <li>Největší počet diváků na zápase: přes 90 000 v Brazílii.</li>
+      <li>Nejvíce účastníků na turnaji: více než 600 týmů v mezinárodní soutěži.</li>
+    </ul>
+  </article>
+
+  <article class="card" id="players">
+    <h3>🌟 Známí hráči</h3>
+    <img src="https://cdn.pixabay.com/photo/2016/11/29/10/07/sport-1867091_1280.jpg" alt="Hráč smečuje míč">
+    <ul>
+      <li>Karch Kiraly – USA, legenda volejbalu a trenér.</li>
+      <li>Giba (Gilberto Godoy Filho) – Brazílie, symbol plážového volejbalu.</li>
+      <li>Kim Yeon-koung – Jižní Korea, nejlepší útočnice současnosti.</li>
+      <li>Ivan Miljković – Srbsko, výborný útočník a reprezentant.</li>
+      <li>Paola Egonu – Itálie, jedna z nejlepších ženských hráček současnosti.</li>
+    </ul>
+  </article>
+
+  <article class="card" id="fun">
+    <h3>🎉 Kuriozity a fakta</h3>
+    <img src="https://cdn.pixabay.com/photo/2016/11/22/19/10/volleyball-1850685_1280.jpg" alt="Plážový volejbal">
+    <ul>
+      <li>Hráči nesmí míč chytat ani vést – jen odrážet.</li>
+      <li>Plážový volejbal se hraje na písku, což zvyšuje fyzickou náročnost.</li>
+      <li>Při smeči mohou hráči vyskočit až 1,2–1,3 m nad síť.</li>
+      <li>Existují speciální volejbalové turnaje pro seniory i děti.</li>
+      <li>Volejbal je populární sport i pro školy a univerzity po celém světě.</li>
+      <li>Některé týmy mají i „maskoty“ a speciální choreografie pro fanoušky.</li>
+    </ul>
+  </article>
+</main>
+
+<footer>
+  © 2025 VolejbalFan | Všechna práva vyhrazena
+</footer>
+</body>
+</html>

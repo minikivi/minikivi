@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html -->
+<html lang="cs"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VolejbalFan – Váš komplexní průvodce volejbalem</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #121212;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: #1f1f1f;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      color: #ffa726;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    nav a {
+      color: #eee;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      position: relative;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffa726;
+    }
+
+    nav a.active::after,
+    nav a:hover::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #ffa726;
+      border-radius: 2px;
+    }
+
+    /* Hero */
+    .hero {
+      background: url('https://cdn.pixabay.com/photo/2017/08/02/01/08/volleyball-2563731_1280.jpg')
+        no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      color: #ffa726;
+      max-width: 700px;
+      font-weight: 600;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-content p {
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+
+    /* Main */
+    main {
+      flex-grow: 1;
+      max-width: 960px;
+      margin: 3rem auto 5rem;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.4rem;
+    }
+
+    /* Karty */
+    article.card {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(255, 167, 38, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    article.card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(255, 167, 38, 0.6);
+    }
+
+    article.card h3 {
+      color: #ffb74d;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1.2px;
+    }
+
+    article.card p,
+    article.card ul {
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    article.card ul {
+      padding-left: 1.3rem;
+    }
+
+    article.card ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    article.card a {
+      color: #ffa726;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      align-self: flex-start;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    article.card a:hover {
+      border-color: #ffa726;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: #ffb74d;
+    }
+
+    input,
+    textarea {
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      background: #2a2a2a;
+      color: #eee;
+      resize: vertical;
+      transition: background 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid #ffa726;
+      background: #3a3a3a;
+    }
+
+    button {
+      background: #ffa726;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 700;
+      color: #1a1a1a;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      align-self: flex-start;
+    }
+
+    button:hover {
+      background: #ffb74d;
+    }
+
+    /* Footer */
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 1.2rem;
+      color: #777;
+      font-weight: 300;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .hero-content h2 {
+        font-size: 2.1rem;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        margin: 2rem 1rem 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏐 Volejbal</h1>
+    <nav>
+      <ul>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html#about" class="active">O volejbalu</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html#history">Historie</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html#rules">Pravidla</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html#famous">Známí hráči</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html#tips">Tréninkové tipy</a></li>
+        <li><a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" aria-label="Obrázek volejbalového zápasu">
+    <div class="hero-content">
+      <h2>Volejbal – hra, která spojuje</h2>
+      <p>Rychlost, energie a týmová spolupráce na nejvyšší úrovni.</p>
+    </div>
+  </section>
+
+  <main>
+    <article class="card" id="about">
+      <h3>🏐 O volejbalu</h3>
+      <p>Volejbal je sport, kde dvě družstva po šesti hráčích soupeří přes síť. Cílem je získat body přehoděním míče na soupeřovu stranu tak, aby ho soupeř nedokázal vrátit.</p>
+    </article>
+
+    <article class="card" id="history">
+      <h3>📜 Historie volejbalu</h3>
+      <p>Volejbal vznikl v roce 1895 v USA, kdy William G. Morgan spojil prvky tenisu, basketbalu a házené do nové hry nazvané "mintonette". Rychle se rozšířil po celém světě a dnes patří mezi nejoblíbenější kolektivní sporty.</p>
+    </article>
+
+    <article class="card" id="rules">
+      <h3>📏 Základní pravidla</h3>
+      <ul>
+        <li>Družstvo má 6 hráčů na hřišti.</li>
+        <li>Každý tým může míče dotknout maximálně třikrát před odesláním přes síť.</li>
+        <li>Míč musí být přehoděn přes síť, aniž by se dotkl země na straně podávajícího.</li>
+        <li>Hráči nesmí míč chytat nebo vést, pouze odrážet.</li>
+        <li>Hraje se do 25 bodů s minimálním náskokem 2 bodů.</li>
+      </ul>
+    </article>
+
+    <article class="card" id="famous">
+      <h3>🌟 Známí volejbalisté</h3>
+      <ul>
+        <li>Karch Kiraly – legendární americký hráč a trenér.</li>
+        <li>Giba (Gilberto Godoy Filho) – brazilská volejbalová ikona.</li>
+        <li>Kim Yeon-koung – jihokorejská hvězda světového volejbalu.</li>
+        <li>Ivan Miljković – srbský reprezentant, jeden z nejlepších útočníků.</li>
+      </ul>
+    </article>
+
+    <article class="card" id="tips">
+      <h3>💡 Tréninkové tipy</h3>
+      <ul>
+        <li>Zaměř se na správnou techniku podání a příjmu míče.</li>
+        <li>Pracuj na kondici, rychlosti a výskoku.</li>
+        <li>Komunikuj s týmem, volejbal je o spolupráci.</li>
+        <li>Pravidelně trénuj nácvik blokování a útoku.</li>
+      </ul>
+    </article>
+
+    <article class="card" id="contact">
+      <h3>✉️ Kontaktuj nás</h3>
+      <form action="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html#" method="POST" onsubmit="alert(&#39;Děkujeme za zprávu!&#39;); return false;">
+        <label for="name">Jméno:</label>
+        <input type="text" id="name" name="name" required="" placeholder="Tvoje jméno">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required="" placeholder="Tvůj email">
+
+        <label for="message">Zpráva:</label>
+        <textarea id="message" name="message" rows="4" required="" placeholder="Napiš nám zprávu..."></textarea>
+
+        <button type="submit">Odeslat</button>
+      </form>
+    </article>
+
+    <!-- 🟧 NOVÉ SEKCE – přidány velmi opatrně -->
+    <article class="card" id="events">
+      <h3>📅 Turnaje a události</h3>
+      <p>Každý rok se po celém světě konají desítky volejbalových turnajů – od místních soutěží až po světové šampionáty. 
+      Mezi nejvýznamnější patří <strong>Mistrovství světa FIVB</strong>, <strong>Olympijské hry</strong> a <strong>World League</strong>.
+      V Česku má tradici například <strong>Český pohár</strong> nebo <strong>Extraliga mužů a žen</strong>.</p>
+      <a href="./VolejbalFan – Turnaje a události.html">Zobrazit kalendář akcí →</a>
+    </article>
+
+    <article class="card" id="teams">
+      <h3>🏟️ Nejlepší týmy světa</h3>
+      <p>Na světové scéně se prosazují legendární týmy jako <strong>Brazílie</strong>, <strong>Itálie</strong>, 
+      <strong>Polsko</strong> nebo <strong>USA</strong>. Každý z nich přináší svůj herní styl a generace hvězd, 
+      které posouvají hranice volejbalu. Inspiruj se jejich strategií a týmovou souhrou!</p>
+      <a href="martin.html">Podívej se na světový žebříček →</a>
+    </article>
+
+    <article class="card" id="facts">
+      <h3>🎓 Zajímavosti o volejbalu</h3>
+      <ul>
+        <li>Volejbal se původně jmenoval „mintonette“.</li>
+        <li>Nejrychlejší smeč dosáhla rychlosti přes 130 km/h.</li>
+        <li>Plážový volejbal byl poprvé zařazen na olympiádu v roce 1996.</li>
+        <li>V profesionálním volejbalu se střídá systém 5 sad do 25 bodů.</li>
+      </ul>
+      <a href="martin4.html">Zjisti víc zajímavostí →</a>
+    </article>
+
+    <article class="card" id="gallery">
+      <h3>📸 Galerie momentů</h3>
+      <p>Podívej se na nezapomenutelné momenty ze světa volejbalu – od epických smečí až po radostné oslavy vítězství. 
+      Každý zápas vypráví svůj příběh plný emocí, týmového ducha a vášně pro hru.</p>
+      <a href="http://127.0.0.1:5500/jak%20vycvi%C4%8Dit%20draka_files/SKOUSK.HTML/martin3.html#"> </a>
+    </article>
+  </main>
+
+  <footer>
+    © 2025 VolejbalFan | Všechna práva vyhrazena
+  </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body> 
+ 
+</html>
