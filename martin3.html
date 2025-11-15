@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🏐 Nejlepší volejbalové týmy světa</title>
+  <title>VolejbalFan – Zajímavosti o volejbalu</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Montserrat', sans-serif;
@@ -56,6 +53,17 @@
       color: #ffa726;
     }
 
+    nav a.active::after,
+    nav a:hover::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #ffa726;
+    }
+
     .hero {
       background: url('https://cdn.pixabay.com/photo/2017/08/02/01/08/volleyball-2563731_1280.jpg')
         no-repeat center center/cover;
@@ -64,6 +72,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 0 2rem;
       position: relative;
     }
 
@@ -71,41 +80,38 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 0;
+      background: rgba(0,0,0,.7);
     }
 
     .hero-content {
       position: relative;
       color: #ffa726;
-      z-index: 1;
       max-width: 700px;
+      font-weight: 600;
+      text-shadow: 2px 2px 8px black;
     }
 
     .hero-content h2 {
       font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-content p {
-      font-weight: 300;
-      font-size: 1.3rem;
+      margin-bottom: .4rem;
     }
 
     main {
-      max-width: 1000px;
+      flex-grow: 1;
+      max-width: 960px;
       margin: 3rem auto 5rem;
-      padding: 0 1.5rem;
+      padding: 0 1rem;
       display: grid;
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.4rem;
     }
 
     article.card {
       background: #1e1e1e;
+      padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 8px 16px rgba(255, 167, 38, 0.3);
-      padding: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: 0.3s;
     }
 
     article.card:hover {
@@ -117,18 +123,11 @@
       color: #ffb74d;
       font-size: 1.6rem;
       margin-bottom: 1rem;
-      letter-spacing: 1px;
+      font-weight: 700;
     }
 
-    article.card p, article.card ul {
-      font-weight: 300;
-      color: #ccc;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    article.card ul {
-      padding-left: 1.2rem;
+    article.card ul li {
+      margin-bottom: .7rem;
     }
 
     footer {
@@ -136,93 +135,139 @@
       text-align: center;
       padding: 1.2rem;
       color: #777;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 480px) {
-      .hero-content h2 {
-        font-size: 2rem;
-      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>🏐 VolejbalFan</h1>
-    <nav>
-      <ul>
-        <li><a href="#" class="active">Nejlepší týmy světa</a></li>
-        <li><a href="#">Turnaje</a></li>
-        <li><a href="#">Galerie</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>🏆 Nejlepší týmy světa</h2>
-      <p>Objev špičku světového volejbalu a týmy, které určují tempo hry.</p>
-    </div>
-  </section>
+<header>
+  <h1>🏐 Volejbal – Zajímavosti</h1>
 
-  <main>
-    <article class="card">
-      <h3>🇧🇷 Brazílie</h3>
-      <p>Brazilský národní tým je dlouhodobě synonymem dominance ve volejbalu. 
-        S několika zlatými medailemi z olympijských her i mistrovství světa patří mezi legendy.
-      </p>
-      <ul>
-        <li>🏅 3× olympijské zlato</li>
-        <li>🌍 5× vítěz Mistrovství světa</li>
-        <li>💪 Hráči: Giba, Wallace, Bruno Rezende</li>
-      </ul>
-    </article>
+  <nav>
+    <ul>
+      <li><a href="martin3.html">Domů</a></li>
+      <li><a class="active">Zajímavosti</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <article class="card">
-      <h3>🇮🇹 Itálie</h3>
-      <p>Italská reprezentace je známá precizní taktikou a týmovým duchem. 
-        Její úspěchy sahají od evropských titulů až po světové finále.</p>
-      <ul>
-        <li>🏅 4× Mistr Evropy</li>
-        <li>🌍 3× vítěz Mistrovství světa</li>
-        <li>💪 Hráči: Ivan Zaytsev, Osmany Juantorena</li>
-      </ul>
-    </article>
+<section class="hero">
+  <div class="hero-content">
+    <h2>Zajímavosti o volejbalu</h2>
+    <p>To nejzajímavější ze světa volejbalu na jednom místě.</p>
+  </div>
+</section>
 
-    <article class="card">
-      <h3>🇵🇱 Polsko</h3>
-      <p>Poláci patří k nejlepším obranářům na světě a jejich fanoušci vytvářejí jedinečnou atmosféru.
-      V posledních letech dominují mezinárodním soutěžím.</p>
-      <ul>
-        <li>🌍 3× Mistr světa</li>
-        <li>🏆 Výrazné postavy: Bartosz Kurek, Wilfredo León</li>
-      </ul>
-    </article>
+<main>
 
-    <article class="card">
-      <h3>🇺🇸 USA</h3>
-      <p>Tým USA přinesl do volejbalu sílu a inovaci. 
-        Jejich přístup ke kondiční přípravě a taktice je inspirací pro celý svět.</p>
-      <ul>
-        <li>🏅 3× olympijské zlato</li>
-        <li>💪 Hráči: Karch Kiraly, Matthew Anderson</li>
-      </ul>
-    </article>
+  <!-- 🔶 20 ČTVEREČKŮ SE ZAJÍMAVOSTMI 🔶 -->
 
-    <article class="card">
-      <h3>🇯🇵 Japonsko</h3>
-      <p>Japonci se vyznačují precizní technikou, bleskovými reakcemi a neúnavnou obranou. 
-        Jejich hra je krásnou ukázkou disciplíny a týmového ducha.</p>
-      <ul>
-        <li>🥉 1× olympijský bronz</li>
-        <li>💪 Hráči: Yūki Ishikawa, Ran Takahashi</li>
-      </ul>
-    </article>
-  </main>
+  <article class="card">
+    <h3>📘 Zajímavost #1</h3>
+    <p>Volejbal byl vynalezen už v roce 1895 W. G. Morganem.</p>
+  </article>
 
-  <footer>
-    © 2025 VolejbalFan | Nejlepší týmy světa
-  </footer>
+  <article class="card">
+    <h3>🏐 Zajímavost #2</h3>
+    <p>Původní název volejbalu byl „mintonette“.</p>
+  </article>
+
+  <article class="card">
+    <h3>⚡ Zajímavost #3</h3>
+    <p>Nejrychlejší smeč měla přes 134 km/h.</p>
+  </article>
+
+  <article class="card">
+    <h3>🌍 Zajímavost #4</h3>
+    <p>Volejbal se dnes hraje ve více než 200 zemích.</p>
+  </article>
+
+  <article class="card">
+    <h3>🔥 Zajímavost #5</h3>
+    <p>Nejdelší volejbalový zápas trval více než 25 hodin.</p>
+  </article>
+
+  <article class="card">
+    <h3>⏱️ Zajímavost #6</h3>
+    <p>Hráči reagují rychlostí až 0,25 sekundy.</p>
+  </article>
+
+  <article class="card">
+    <h3>🏖️ Zajímavost #7</h3>
+    <p>Plážový volejbal vznikl na Havaji jako zábava na pláži.</p>
+  </article>
+
+  <article class="card">
+    <h3>📏 Zajímavost #8</h3>
+    <p>Výška sítě pro muže je 243 cm, pro ženy 224 cm.</p>
+  </article>
+
+  <article class="card">
+    <h3>💥 Zajímavost #9</h3>
+    <p>Smeč profesionála může mít sílu přes 1200 N.</p>
+  </article>
+
+  <article class="card">
+    <h3>❄️ Zajímavost #10</h3>
+    <p>Existuje i sněhový volejbal, hraný na horách.</p>
+  </article>
+
+  <article class="card">
+    <h3>🌊 Zajímavost #11</h3>
+    <p>Vodní volejbal se hraje v bazénech ve mělké vodě.</p>
+  </article>
+
+  <article class="card">
+    <h3>📸 Zajímavost #12</h3>
+    <p>Moderní volejbal používá systém „challenge“.</p>
+  </article>
+
+  <article class="card">
+    <h3>🎯 Zajímavost #13</h3>
+    <p>Míč váží pouhých 260–280 gramů.</p>
+  </article>
+
+  <article class="card">
+    <h3>🏆 Zajímavost #14</h3>
+    <p>Brazílie patří dlouhodobě mezi nejlepší týmy světa.</p>
+  </article>
+
+  <article class="card">
+    <h3>🦅 Zajímavost #15</h3>
+    <p>Nejvyšší hráč volejbalu měří 218 cm.</p>
+  </article>
+
+  <article class="card">
+    <h3>📜 Zajímavost #16</h3>
+    <p>Volejbal je olympijským sportem od roku 1964.</p>
+  </article>
+
+  <article class="card">
+    <h3>🧠 Zajímavost #17</h3>
+    <p>Hráči se během zápasu rozhodují stovkykrát za minutu.</p>
+  </article>
+
+  <article class="card">
+    <h3>💡 Zajímavost #18</h3>
+    <p>Libero nesmí smečovat ani podávat (většinou).</p>
+  </article>
+
+  <article class="card">
+    <h3>🌐 Zajímavost #19</h3>
+    <p>Největší volejbalová hala pojme až 20 000 lidí.</p>
+  </article>
+
+  <article class="card">
+    <h3>🥇 Zajímavost #20</h3>
+    <p>Některé smeče měly rekordní výšku přes 3,7 metru.</p>
+  </article>
+
+</main>
+
+<footer>
+  © 2025 VolejbalFan | Všechna práva vyhrazena
+</footer>
+
 </body>
 </html>
-
