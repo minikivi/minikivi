@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>🏐 Nejlepší volejbalové týmy světa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Montserrat',sans-serif;
+      background:#121212;
+      color:#eee;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    header{
+      background:#1f1f1f;
+      padding:1rem 1.5rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 8px rgba(0,0,0,0.8);
+    }
+    header h1{color:#ffa726;font-weight:600;letter-spacing:2px}
+    nav a{color:#eee;text-decoration:none;margin-left:1rem}
+    .hero{
+      background:url('https://cdn.pixabay.com/photo/2017/08/02/01/08/volleyball-2563731_1280.jpg') center/cover no-repeat;
+      position:relative;height:36vh;display:flex;align-items:center;justify-content:center;
+    }
+    .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.6)}
+    .hero-content{position:relative;color:#ffa726;text-align:center}
+    .hero-content h2{font-size:2.4rem;margin-bottom:.3rem}
+
+    .container{
+      max-width:1200px;
+      margin:2.2rem auto;
+      padding:0 1rem;
+      display:grid;
+      grid-template-columns:1fr 420px 1fr;
+      gap:1.6rem;
+      align-items:start;
+    }
+
+    .col{display:flex;flex-direction:column;gap:1.2rem}
+
+    /* karta */
+    .card{
+      background:#1e1e1e;
+      padding:1.3rem;
+      border-radius:12px;
+      box-shadow:0 6px 14px rgba(255,167,38,0.12);
+      transition:transform .25s ease,box-shadow .25s ease;
+    }
+    .card:hover{transform:translateY(-6px)}
+    .card h3{margin-bottom:.5rem;font-size:1.25rem}
+    .card p{color:#ccc;font-weight:300;line-height:1.5}
+    .card ul{color:#ccc;margin-top:.6rem;padding-left:1.1rem;font-weight:300}
+
+    /* 🥇 Zlatý střed */
+    .center .card{
+      background:linear-gradient(180deg,#3a2f00,#1b1b1b);
+      border:1px solid rgba(255,215,0,0.35);
+      box-shadow:0 0 25px rgba(255,215,0,0.45),0 0 60px rgba(255,215,0,0.2);
+    }
+    .center .card h3{color:#ffd54f}
+    .center .card:hover{
+      box-shadow:0 0 40px rgba(255,215,0,0.6),0 0 80px rgba(255,215,0,0.3);
+    }
+
+    /* 🥉 Bronzové vlevo */
+    .left .card{
+      background:linear-gradient(180deg,#3a250f,#1b1b1b);
+      border:1px solid rgba(205,127,50,0.3);
+      box-shadow:0 0 20px rgba(205,127,50,0.35);
+    }
+    .left .card h3{color:#cd7f32}
+    .left .card:hover{
+      box-shadow:0 0 40px rgba(205,127,50,0.5);
+    }
+
+    /* 🥈 Stříbrné vpravo */
+    .right .card{
+      background:linear-gradient(180deg,#2c2c2c,#1b1b1b);
+      border:1px solid rgba(192,192,192,0.3);
+      box-shadow:0 0 20px rgba(192,192,192,0.3);
+    }
+    .right .card h3{color:#c0c0c0}
+    .right .card:hover{
+      box-shadow:0 0 40px rgba(192,192,192,0.45);
+    }
+
+    /* legenda */
+    .legend{
+      max-width:1200px;
+      margin:0 auto 1.2rem;
+      padding:0 1rem;
+      display:flex;
+      gap:1rem;
+      align-items:center;
+      justify-content:center;
+      font-size:.95rem;
+      color:#cfcfcf;
+    }
+    .pill{
+      background:#1f1f1f;
+      padding:.45rem .7rem;
+      border-radius:999px;
+      color:#d9d9d9;
+      border:1px solid rgba(255,167,38,0.06);
+    }
+
+    footer{
+      background:#1f1f1f;
+      padding:1rem;
+      text-align:center;
+      color:#777;
+      margin-top:auto;
+    }
+
+    @media (max-width:980px){
+      .container{grid-template-columns:1fr;padding-bottom:2rem}
+      .hero{height:32vh}
+      .hero-content h2{font-size:1.85rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏐 VolejbalFan</h1>
+    <nav>
+      <a href="#">Týmy</a>
+      <a href="#">Turnaje</a>
+      <a href="#">Galerie</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>🥇🥈🥉 Nejlepší týmy světa</h2>
+      <p>Střední sloupec září zlatě, vlevo bronz, vpravo stříbro.</p>
+    </div>
+  </section>
+
+  <div class="legend">
+    <div class="pill">🥇 Zlatý střed — TOP týmy</div>
+    <div class="pill">🥉 Vlevo — silné</div>
+    <div class="pill">🥈 Vpravo — rozvíjející se</div>
+  </div>
+
+  <main class="container">
+    <!-- LEVÝ SLOUPEC 🥉 BRONZ -->
+    <div class="col left">
+      <article class="card">
+        <h3>🇫🇷 Francie</h3>
+        <p>Silná týmová chemie a kreativní hra. Mistr Evropy 2015, zlato z Tokia 2021.</p>
+      </article>
+
+      <article class="card">
+        <h3>🇯🇵 Japonsko</h3>
+        <p>Rychlá obrana, perfektní technika. Neustále zlepšující se tým s tradicí.</p>
+      </article>
+
+      <article class="card">
+        <h3>🇨🇳 Čína</h3>
+        <p>Dominantní ženský volejbal, mnoho olympijských titulů a silná základna hráček.</p>
+      </article>
+    </div>
+
+    <!-- STŘEDNÍ SLOUPEC 🥇 ZLATO -->
+    <div class="col center">
+      <article class="card">
+        <h3>🇧🇷 Brazílie</h3>
+        <p>Vítěz mnoha světových turnajů, ikonický tým se skvělou tradicí a energií.</p>
+      </article>
+
+      <article class="card">
+        <h3>🇵🇱 Polsko</h3>
+        <p>Disciplinovaný tým, vítěz několika Mistrovství světa. Fanoušci tvoří neuvěřitelnou atmosféru.</p>
+      </article>
+
+      <article class="card">
+        <h3>🇮🇹 Itálie</h3>
+        <p>Skvělá technika, útočný styl a silná generace mladých talentů.</p>
+      </article>
+
+      <article class="card">
+        <h3>🇺🇸 USA</h3>
+        <p>Kombinuje sílu, taktiku a fyzickou připravenost. Vždy mezi nejlepšími na světě.</p>
+      </article>
+    </div>
+
+    <!-- PRAVÝ SLOUPEC 🥈 STŘÍBRO -->
+    <div class="col right">
+      <article class="card">
+        <h3>🇷🇸 Srbsko</h3>
+        <p>Silný ženský volejbalový tým, častý medailista. Muži se zlepšují každou sezónu.</p>
+      </article>
+
+      <article class="card">
+        <h3>🇦🇷 Argentina</h3>
+        <p>Technická hra, bojovnost a srdce. Bronz z Tokia 2021 potvrzuje jejich sílu.</p>
+      </article>
+
+      <article class="card">
+        <h3>🇨🇿 Česko</h3>
+        <p>Bohatá historie, nadějná budoucnost a rostoucí kvalita v evropských soutěžích.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 VolejbalFan | Pódiové rozložení týmů 🥇🥈🥉
+  </footer>
+</body>
+</html>
+
